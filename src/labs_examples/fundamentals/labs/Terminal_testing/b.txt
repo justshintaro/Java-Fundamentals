@@ -1,0 +1,10 @@
+apple
+orange
+grape
+peach
+dog cat horse
+school library gym
+
+math music history
+
+random random random
