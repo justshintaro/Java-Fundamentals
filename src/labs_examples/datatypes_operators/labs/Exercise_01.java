@@ -17,6 +17,18 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
+        int inval = 123454321;
+        System.out.println(inval);
+
+        double douval = 12311.12121111111111111111111212;
+        System.out.println(douval);
+
+        float fval = 122.1111111111123f;
+        System.out.println(fval);
+
+        char letter = 'X';
+        System.out.println(letter);
+
 
     }
 }

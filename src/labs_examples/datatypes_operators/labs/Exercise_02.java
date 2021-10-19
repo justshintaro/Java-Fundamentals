@@ -24,6 +24,14 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
+        int inval = 1001;
+        double douval = inval;
+        System.out.println(douval);
+
+        double doubleval = 10.5;
+        int inteval = (int) doubleval;
+        System.out.println(inteval);
+
 
     }
 }

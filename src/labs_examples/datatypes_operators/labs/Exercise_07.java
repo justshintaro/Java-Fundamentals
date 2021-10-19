@@ -24,6 +24,8 @@ public class Exercise_07 {
         int days = scanner.nextInt();
 
         // write completed code here
+        int answer = days*(60*60*24);
+        System.out.println("the conversion from days to seconds is... "+answer);
 
     }
 }

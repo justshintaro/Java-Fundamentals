@@ -14,5 +14,14 @@ public class Exercise_06 {
 
         // write code here
 
+        int radius = 10;
+        int height = 5;
+        float pi = 3.14f;
+
+        double volume = (radius*radius) * pi * height;
+        double area = 2*pi*(radius*radius) + 2*height*radius*pi;
+        System.out.println("are = "+area);
+        System.out.println("volume = "+volume);
+
     }
 }
