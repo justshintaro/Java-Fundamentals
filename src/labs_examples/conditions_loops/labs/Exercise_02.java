@@ -4,17 +4,15 @@ import java.util.Scanner;
 
 /**
  * Conditions and Loops Exercise 2: Days of the week
- *
- *      Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
- *      if the number from the user is 1, 2,... 7, or other respectively. Use an if-else statement
- *      to accomplish this task.
- * 
- *      Bonus Tricky Challenge: Use a "nested-if" statement.
- *
+ * <p>
+ * Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
+ * if the number from the user is 1, 2,... 7, or other respectively. Use an if-else statement
+ * to accomplish this task.
+ * <p>
+ * Bonus Tricky Challenge: Use a "nested-if" statement.
  */
 
 public class Exercise_02 {
-
     public static void main(String[] args) {
 
         // 1) create scanner (don't forget to import Scanner!)
@@ -29,24 +27,23 @@ public class Exercise_02 {
         // assign input to variable as int
         int weekday = scanner.nextInt();
 
-        if(weekday==1) {
+        if (weekday == 1) {
             System.out.println("Mon");
-        } else if(weekday==2){
+        } else if (weekday == 2) {
             System.out.println("Tue");
-        } else if(weekday==3){
+        } else if (weekday == 3) {
             System.out.println("Wed");
-        } else if(weekday==4){
+        } else if (weekday == 4) {
             System.out.println("Thu");
-        } else if(weekday==5){
+        } else if (weekday == 5) {
             System.out.println("Fri");
-        } else if(weekday==6){
+        } else if (weekday == 6) {
             System.out.println("Sat");
-        } else if(weekday==7){
+        } else if (weekday == 7) {
             System.out.println("Sun");
         } else {
             System.out.println("Other");
         }
-
 
 
     }

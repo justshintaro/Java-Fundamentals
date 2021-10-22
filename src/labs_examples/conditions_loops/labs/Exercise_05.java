@@ -28,13 +28,10 @@ public class Exercise_05 {
         // assign input to variable as int
         int upper = scanner.nextInt();
 
-
-        // create scanner
-        Scanner scanner_2 = new Scanner(System.in);
         // prompt user
         System.out.print("Enter a number for lower bound: ");
         // assign input to variable as int
-        int lower = scanner_2.nextInt();
+        int lower = scanner.nextInt();
 
         float sum=0;
 

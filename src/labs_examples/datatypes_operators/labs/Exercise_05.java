@@ -26,9 +26,11 @@ class LogicalOperators {
 
         int e = 3;
         int f = 4;
-        if ((e < f) && (e < f)){
+        if ((e > f) && (e < f)){
             System.out.println("lh is true and rh is true too");
         }
+
+
 
         float g = 12.23f;
         float h = 12.24f;

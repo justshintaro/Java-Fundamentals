@@ -23,6 +23,9 @@ public class Exercise_07 {
         System.out.print("Enter a string: ");
         String str= sc.nextLine();              //reads string
 
+
+
+
         String vowels = "aeiou";
         int i=0;
         int j=0;
