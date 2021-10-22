@@ -23,4 +23,22 @@ package labs_examples.conditions_loops.labs;
 
 public class Exercise_11 {
 
+    public static void main(String[] args) {
+        int i = 1;
+        int j = 1;
+
+        for (; i <= 10; i++) {
+
+            for (; j <= 10; j++) {
+                int mul = i * j;
+
+                if (j != 10) {
+                    System.out.print(mul + " /");
+                } else {
+                    System.out.println(mul + " /");
+                }
+            }
+            j = 1;
+        }
+    }
 }
