@@ -10,4 +10,29 @@ package labs_examples.arrays.labs;
 
 public class Exercise_05 {
 
+    public static void main(String[] args) {
+
+        int[] list = new int[20];
+
+        for (int i = 0; i < list.length; i++ ){
+
+            list[i] = i*i;
+
+        }
+
+        for (int val: list){
+            System.out.print(val+" ");
+        }
+
+        System.out.println("");
+
+        for (int rev = list.length-1; rev>=0; rev-- ){
+
+            System.out.print(list[rev]+" ");
+
+
+        }
+
+    }
+
 }

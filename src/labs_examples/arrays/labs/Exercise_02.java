@@ -7,6 +7,8 @@ package labs_examples.arrays.labs;
  *      element.
  *
  */
+import javax.sound.midi.Soundbank;
+import java.util.Scanner;  // Import the Scanner class
 
 public class Exercise_02 {
 
@@ -15,6 +17,11 @@ public class Exercise_02 {
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         // write code here
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter a number from 1-10");
+        int index = myObj.nextInt();  // Read user input
+
+        System.out.println(array[index]);
 
 
     }

@@ -12,4 +12,26 @@ package labs_examples.arrays.labs;
 
 public class Exercise_01 {
 
+    public static void main(String[] args) {
+
+        int[] vals = new int[10];
+        for (int i=0; i < vals.length; i++){
+            vals[i] = i;
+        }
+
+        for (int i : vals){
+            System.out.println(i);
+        }
+
+        int sum = 0;
+        for (int i=0; i < vals.length; i++){
+            sum += vals[i];
+        }
+        System.out.println("sum is "+sum);
+
+        float ave = sum/vals.length;
+        System.out.println("average is "+ ave );
+
+    }
+
 }
