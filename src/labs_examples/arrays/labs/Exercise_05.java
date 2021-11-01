@@ -26,9 +26,10 @@ public class Exercise_05 {
 
         System.out.println("");
 
-        for (int rev = list.length-1; rev>=0; rev-- ){
+        for (int rev = list.length-1; rev>=0; rev-=2){
 
             System.out.print(list[rev]+" ");
+
 
 
         }

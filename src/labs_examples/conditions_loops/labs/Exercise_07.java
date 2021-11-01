@@ -25,21 +25,21 @@ public class Exercise_07 {
 
 
 
-
         String vowels = "aeiou";
+
         int i=0;
         int j=0;
 
-        while (i <= str.length()){
+        while (i < str.length()){
 
-            for( ; j<=4 ; j++){
+//            System.out.println(vowels.indexOf(str.charAt(i)));
 
-                if(str.charAt(i) == vowels.charAt(j))
-                    System.out.println(vowels.charAt(j));
-                }
-
-            i++;
-            j = 0;
+            if(vowels.indexOf(str.charAt(i)) >= 0){
+                System.out.println(str.charAt(i));
+                System.out.println(str);
+                break;
+            }
+           i++;
 
             }
         }

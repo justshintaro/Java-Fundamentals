@@ -35,14 +35,15 @@ public class Exercise_05 {
 
         float sum=0;
 
-        for (; lower <= upper ; lower++){
-            sum = sum + lower;
+        for (; lower <= upper ; lower++) {
+            sum = sum + lower;   // without curly braces is fine
         }
 
         float ave = sum/(upper);
 
         System.out.println("The sum is: "+sum);
         System.out.println("The average is: "+ave);
+
 
     }
 }

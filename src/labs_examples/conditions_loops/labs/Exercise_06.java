@@ -13,8 +13,8 @@ public class Exercise_06 {
         int sum = 0;
         int i = 1;
         while(i <= 100){
-            sum += i;
-            i++;
+            sum += i++*7;
+
             System.out.println(sum);
         }
         System.out.println("the sum of numbers from 1-100 is:"+sum);

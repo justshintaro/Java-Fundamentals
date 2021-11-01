@@ -12,7 +12,7 @@ public class Exercise_04 {
     public static void main(String[] args) {
 
         Object[][] irregular = {
-                { 1, 2, 3 },
+                { 1, 2, 3, new Exercise_04() },
                 { 1, 2, 3, 4 },
                 {102, 121, 12, 12 },
                 {"test", "random"},

@@ -18,9 +18,9 @@ public class Exercise_07 {
 
     public static void main(String[] args) {
 
-        List<List> listOfMixedTypes = new ArrayList<>();
+        ArrayList<ArrayList> listOfMixedTypes = new ArrayList();
 
-        ArrayList<String> listOfString = new ArrayList<String>();
+        ArrayList<String> listOfString = new ArrayList();
         listOfString.add("abc");
         listOfString.add("def");
         listOfString.add("ghi");
@@ -29,7 +29,7 @@ public class Exercise_07 {
         listOfString.add("pqr");
 
 
-        ArrayList<Integer> listOfInteger = new ArrayList<Integer>();
+        ArrayList<Integer> listOfInteger = new ArrayList();
         listOfInteger.add(123);
         listOfInteger.add(456);
         listOfInteger.add(789);

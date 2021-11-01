@@ -18,7 +18,7 @@ public class Exercise_10 {
             if (i%2==0){
                 continue;
             }
-            System.out.println("i is currently = "+i);
+            System.out.println("i is = "+i);
 
         }
     }
