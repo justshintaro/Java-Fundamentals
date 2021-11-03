@@ -28,7 +28,6 @@ public class Exercise_07 {
         listOfString.add("mno");
         listOfString.add("pqr");
 
-
         ArrayList<Integer> listOfInteger = new ArrayList();
         listOfInteger.add(123);
         listOfInteger.add(456);
