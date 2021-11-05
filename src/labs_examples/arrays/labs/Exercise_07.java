@@ -27,7 +27,7 @@ public class Exercise_07 {
         listOfString.add("jkl");
         listOfString.add("mno");
         listOfString.add("pqr");
-        
+
 
         ArrayList<Integer> listOfInteger = new ArrayList();
         listOfInteger.add(123);
