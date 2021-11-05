@@ -15,7 +15,7 @@ public class Exercise_01 {
         int d = divide(100,5);
         System.out.println(d);
 
-        joke("this is a joke");
+        joke();
 
         int y = years(1);
         System.out.println(y);
@@ -37,10 +37,8 @@ public class Exercise_01 {
         return a/b;
     }
     // 3) Create a static void method that will print of joke of your choice to the console
-    public static void joke(String...V){
-        for (String word:V){
-            System.out.println(word);
-        }
+    public static void joke(){
+        System.out.println("this is a joke");;
     }
     // 4) Create a static method that takes in a number in years (int years) as an argument
     //    and returns the number of seconds that number in years represents
@@ -48,8 +46,8 @@ public class Exercise_01 {
         return years*365*24*60*60;
     }
     // 5) Create a varargs method that will return the length of the varargs array passed in
-    public static void varargsM(String...v){
+    public static int varargsM(String... v){
         int size = v.length;
-        System.out.println(size);
+        return size;
     }
 }
