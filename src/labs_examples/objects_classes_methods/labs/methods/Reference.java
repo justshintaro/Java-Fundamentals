@@ -7,12 +7,12 @@ public class Reference {
     public int height;
     public String name;
 
-    Reference(){
+   public Reference(){
         age = 23;
         height = 175;
         name = "shin";
     }
-    Reference(int age, int height, String name){
+    public Reference(int age, int height, String name){
         this.age = age;
         this.height = height;
         this.name = name;
@@ -21,7 +21,6 @@ public class Reference {
     public void person(int age, int height, String name){
         System.out.println("age= "+ age +" height= " + height +" name= "+ name);
     }
-
 
     public void person(){
         System.out.println("age= "+ this.age +" height= " + this.height +" name= "+ this.name);

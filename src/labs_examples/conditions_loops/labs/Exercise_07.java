@@ -28,7 +28,6 @@ public class Exercise_07 {
         String vowels = "aeiou";
 
         int i=0;
-        int j=0;
 
         while (i < str.length()){
 
