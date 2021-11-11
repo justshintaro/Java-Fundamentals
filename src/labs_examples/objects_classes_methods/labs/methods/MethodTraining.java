@@ -41,15 +41,16 @@ public class MethodTraining{
         System.out.println();
 
         //6) Write a method that will return a small array containing the highest and lowest numbers in a given numeric array, which is passed in as an argument
-        arrayHighLow(12.9, 23.0, 12.0, 1.1, 100.11);
-        System.out.println();
+        int[] array = arrayHighLow(new int[]{1, 2, 4, 5, 6, 1, 2, 8, 5, 6});
+        System.out.println(array[0]);
+        System.out.println(array[1]);
 
         //7) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.
         myMethod(100, 3, 5);
         System.out.println(" ");
 
         //8) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
-        reverseArray(1,2,3,4,5,6,7,8,9,10, 11, 12, 13);
+        reverseArray(1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 100);
 
 
     }
@@ -78,12 +79,13 @@ public class MethodTraining{
 
     // 3) Create a method that will return the largest of 4 numbers (all of which are passed in as arguments)
     public static void varargsMethod(Integer... v){
-        List<Integer> largestNums = new ArrayList();
-        for(int i=0; i<v.length; i++){
-            largestNums.add(v[i]);
-        }
+        ArrayList<Integer> largestNums = new ArrayList();
+        largestNums.addAll(Arrays.asList(v));  // have for loop within the method
+//        for(int i=0; i<v.length; i++){
+//            largestNums.add(v[i]);
+//        }
         Collections.sort(largestNums, Collections.reverseOrder());
-        System.out.println(largestNums.subList(0,4));
+        System.out.println(largestNums.get(0));
     }
 
     // 4) Write a method to count all consonants (the opposite of vowels) in a String
@@ -110,37 +112,39 @@ public class MethodTraining{
 
     // 5) Write a method that will determine whether a number is prime
     public static boolean prime(int num){
-        boolean Prime = true;
         int i = 2;
         if(num < 2){
-            Prime = false;
+            return false;
         }else if (num==2){
-            Prime = true;
+            return true;
         }
         while(i <= num/2){
             if(num%i==0){
-                Prime = false;
-                break;
+                return false;
             }
             i++;
         }
-        return Prime;
+        return true;
     }
 
     //6) Write a method that will return a small array containing the highest and lowest numbers in a given numeric array, which is passed in as an argument
-    public static void arrayHighLow(Double... d){    //what is the difference between double and Double
-        List<Double> returnArray = new ArrayList();  // Arraylist has a lot of methods to it which is useful. Then how can I make an array list without taking this step?
-        for(int i=0; i<d.length; i++){
-            returnArray.add(d[i]);
+    public static int[] arrayHighLow(int[] array){
+        int[] output = new int[2];
+        output[0] = array[0];
+        output[1] = array[0];
+        for(int i=0; i < array.length; i++){
+            if(array[i]>= output[0]){
+                output[0] = array[i];
+            }
+            if(array[i]<=output[1]){
+                output[1] = array[i];
+            }
         }
-        Collections.sort(returnArray);
-        System.out.println("The lowest number = "+returnArray.get(0));
-        System.out.println("The highest number = "+returnArray.get(returnArray.size()-1));
-
+        return output;
     }
 
     //7) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.
-    public static void myMethod(int maxNum, int divisor1, int divisor2){
+    public static void myMethod(int maxNum, int divisor1, int divisor2){   // update to return
         ArrayList<Integer> arr = new ArrayList();
         for(int i=1; i<maxNum; i++){
             if(i%divisor1==0 && i%divisor2==0){
@@ -151,19 +155,15 @@ public class MethodTraining{
     }
 
     //8) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
-    public static void reverseArray(Integer... I){
+    public static void reverseArray(int[] array){   //update
         int temp;
-        List<Integer> arr = new ArrayList();
-        for(int i=0; i<I.length; i++){
-            arr.add(I[i]);
+        for(int j=0; j<=array.size()/2; j++){
+            temp = array.get(j);
+            array.set(j, array.get(array.size()-1-j));
+            array.set(array.size()-1-j, temp);
         }
-
-        for(int j=0; j<=arr.size()/2; j++){
-            temp = arr.get(j);
-            arr.set(j, arr.get(arr.size()-1-j));
-            arr.set(arr.size()-1-j, temp);
-        }
-        System.out.println(arr);
+        System.out.println(array);
+        
 
     }
 
