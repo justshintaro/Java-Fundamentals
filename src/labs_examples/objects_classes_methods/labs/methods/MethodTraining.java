@@ -46,11 +46,12 @@ public class MethodTraining{
         System.out.println(array[1]);
 
         //7) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.
-        myMethod(100, 3, 5);
+        System.out.println(myMethod(100, 3, 5));
         System.out.println(" ");
 
         //8) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
-        reverseArray(1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 100);
+        int[] ar = reverseArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 100});
+        System.out.println(ar);
 
 
     }
@@ -144,27 +145,30 @@ public class MethodTraining{
     }
 
     //7) Write a method that takes 3 arguments (int maxNum, int divisor1, int divisor2) and returns an Integer Arraylist.
-    public static void myMethod(int maxNum, int divisor1, int divisor2){   // update to return
+    public static ArrayList<Integer> myMethod(int maxNum, int divisor1, int divisor2){
         ArrayList<Integer> arr = new ArrayList();
         for(int i=1; i<maxNum; i++){
             if(i%divisor1==0 && i%divisor2==0){
                 arr.add(i);
             }
         }
-        System.out.println(arr);
+        return arr;
     }
 
     //8) Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
-    public static void reverseArray(int[] array){   //update
+    public static int[] reverseArray(int[] array){   //update
         int temp;
-        for(int j=0; j<=array.size()/2; j++){
-            temp = array.get(j);
-            array.set(j, array.get(array.size()-1-j));
-            array.set(array.size()-1-j, temp);
+        for(int j=0; j<=array.length/2; j++){
+//            temp = array.get(j);
+//            array.set(j, array.get(array.size()-1-j));
+//            array.set(array.size()-1-j, temp);
+            temp = array[j];
+            array[j] =  array[array.length-1-j];
+            array[array.length-1-j] =  temp;
         }
         System.out.println(array);
-        
 
+        return array;
     }
 
 
