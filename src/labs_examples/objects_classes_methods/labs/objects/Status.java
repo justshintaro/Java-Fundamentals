@@ -14,7 +14,6 @@ public class Status {
     }
 
 
-
     public String getAirplaneName() {
         return airplaneName;
     }
@@ -23,7 +22,7 @@ public class Status {
         this.airplaneName = airplaneName;
     }
 
-    public boolean isTakeoff() {
+    public boolean hasTakeoff() {
         return takeoff;
     }
 
@@ -31,7 +30,7 @@ public class Status {
         this.takeoff = takeoff;
     }
 
-    public boolean isLanded() {
+    public boolean hasLanded() {
         return landed;
     }
 
@@ -45,7 +44,7 @@ public class Status {
     @Override
     public String toString() {
         return "Status{" +
-                "airplaneName='" + airplaneName + '\'' +
+                "airplaneName='" + airplaneName.toString() + '\'' +
                 ", takeoff=" + takeoff +
                 ", landed=" + landed +
                 '}';

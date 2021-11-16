@@ -31,12 +31,9 @@ public class Route {
 
 
 
-
     @Override
     public String toString() {
-        return "Route{" +
-                "depCity='" + depCity + '\'' +
-                ", desCity='" + desCity + '\'' +
-                '}';
+        return "Departing " + depCity +
+                ", arriving " + desCity + ".";
     }
 }

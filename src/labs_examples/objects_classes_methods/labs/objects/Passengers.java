@@ -4,9 +4,9 @@ public class Passengers {
 
     private String name;
     private int age;
-    private double height;
+    private float height;
 
-    public Passengers(String name, int age, double height) {
+    public Passengers(String name, int age, float height) {
         this.name = name;
         this.age = age;
         this.height = height;
@@ -33,7 +33,7 @@ public class Passengers {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(float height) {
         this.height = height;
     }
 

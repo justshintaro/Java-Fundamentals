@@ -8,7 +8,7 @@ public class Airplane {
     Seat seat;
 
     double fuel;
-    String currentFuelLevel;
+    double currentFuelLevel;
 
 
     // first constructor
@@ -23,7 +23,7 @@ public class Airplane {
     }
 
     // third constructor
-    public Airplane(Status status, Route route, Passengers passengers, Seat seat, double fuel, String currentFuelLevel) {
+    public Airplane(Status status, Route route, Passengers passengers, Seat seat, double fuel, double currentFuelLevel) {
         this.status = status;
         this.route = route;
         this.passengers = passengers;
@@ -73,11 +73,11 @@ public class Airplane {
         this.fuel = fuel;
     }
 
-    public String getCurrentFuelLevel() {
+    public double getCurrentFuelLevel() {
         return currentFuelLevel;
     }
 
-    public void setCurrentFuelLevel(String currentFuelLevel) {
+    public void setCurrentFuelLevel(double currentFuelLevel) {
         this.currentFuelLevel = currentFuelLevel;
     }
 
@@ -88,7 +88,7 @@ public class Airplane {
     public String toString() {
         return "Airplane{" +
                 "\nstatus=" + status  +
-                "\n, route=" + route +
+                "\n, route= " + route +
                 "\n, passengers=" + passengers +
                 "\n, seat=" + seat +
                 "\n, fuel=" + fuel +
