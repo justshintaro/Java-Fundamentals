@@ -4,7 +4,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
  * Why does the output print in the order it does?
  *
  * You answer:
- *
+ * Why does A_1 c = new C_1(); also print the same # this also relates to the exercise_04
  */
 
 class A_1 {

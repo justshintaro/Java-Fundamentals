@@ -1,6 +1,9 @@
 
 Without running the code below, please tell me what it will print.
 
+It prints:
+"Parent called"
+"Child called"
 
 
 public class InheritanceTest
