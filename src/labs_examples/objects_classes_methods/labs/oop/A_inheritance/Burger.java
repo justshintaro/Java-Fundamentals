@@ -10,6 +10,7 @@ public class Burger extends Food{
     protected int expirationDate;
     protected String origin;
 
+
     public Burger(String name, double price, double calories, boolean popular, String typeOfMeat, boolean vegan){
         super(name, price, calories, popular);
         this.typeOfMeat = typeOfMeat;

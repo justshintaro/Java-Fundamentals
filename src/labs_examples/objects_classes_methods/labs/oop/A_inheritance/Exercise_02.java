@@ -4,8 +4,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
  * Run the class below and study the output. What prints and why?
  *
  * Your answer:
- * The object "a" gets created using B class which is inherited from A, which enables not to have "new A()" instead.
- * Now the object "a" access "i=10" by way of extending from B to A.
+ * Initialized A object which only has data from class A. But because class B extends A, it can be initialized A=B.sla
  *
  */
 class A {
@@ -13,6 +12,7 @@ class A {
 }
 
 class B extends A{
+    int j = 30;
     int i = 20;
 }
 
@@ -22,5 +22,7 @@ public class Exercise_02 {
         A a = new B();
 
         System.out.println(a.i);
+        System.out.println(((B)a).j);
+
     }
 }
