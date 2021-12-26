@@ -34,8 +34,8 @@ public class Soccer implements Sport{
 
 
     @Override
-    public void country(String x) {
-        System.out.println("this sport is popular in "+x);
+    public void country() {
+        System.out.println("this sport is popular in Spain");
 
     }
 

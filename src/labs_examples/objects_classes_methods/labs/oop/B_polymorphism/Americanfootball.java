@@ -21,6 +21,14 @@ public class Americanfootball implements Sport{
         this.team = team;
     }
 
+    public static void cheerleader(boolean y){
+        if (y == true) {
+            System.out.println("Go team Go!");
+        } else {
+            System.out.println(" ");
+        }
+    }
+
 
 
     @Override
@@ -33,8 +41,8 @@ public class Americanfootball implements Sport{
     }
 
     @Override
-    public void country(String x) {
-        System.out.println("this sport is popular in "+x);
+    public void country() {
+        System.out.println("this sport is popular in the US");
 
     }
 
