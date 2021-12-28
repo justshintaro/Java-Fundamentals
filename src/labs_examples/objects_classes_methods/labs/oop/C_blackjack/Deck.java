@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Deck {
 
-    protected Card[] cards;;
+    protected Card[] cards;
     protected ArrayList<Integer> usedCards;
 
     public void populate(){
@@ -15,12 +15,12 @@ public class Deck {
         String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
         for (int i = 0; i < suits.length; i++) {
+
             for (int j = 0; j < ranks.length; j++) {
-//                cards[??] = i +" " +j;
+                System.out.println(ranks.length);
+
             }
         }
     }
 }
-
-
 
