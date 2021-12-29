@@ -6,6 +6,10 @@ public class Card {
     protected int cardValue;
     protected int suit;
 
+
+    public Card() {
+    }
+
     public Card(int cardValue, int suit) {
         this.cardValue = cardValue;
         this.suit = suit;

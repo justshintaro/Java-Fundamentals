@@ -7,4 +7,14 @@ public class Player {
     protected int potValue;
 
 
+    public Player() {
+    }
+
+    public Player(Hand hand) {
+        this.hand = hand;
+    }
+
+
+
+
 }

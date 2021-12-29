@@ -5,4 +5,8 @@ public class Hand {
 
     protected ArrayList<Card> cards;
     protected int handValue;
+
+    public Hand(ArrayList<Card> cards) {
+        this.cards = cards;
+    }
 }
