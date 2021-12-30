@@ -2,19 +2,25 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Player {
 
-    protected String name;
-    protected Hand hand;
-    protected int potValue;
+    String name;
+    Hand hand;
+    int potValue;
 
 
-    public Player() {
+    public Player(String name) {
+        this.name = name;
+        this.hand = new Hand();
     }
 
-    public Player(Hand hand) {
-        this.hand = hand;
+    public Hand getHand() {
+        return hand;
     }
 
-
-
-
+    public boolean computerAI(){
+        if (getHand().returnScore()<16){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

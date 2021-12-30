@@ -2,9 +2,9 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Card {
 
-    protected char[] suits = new char[]{'♠', '♦', '♥', '♣'};
-    protected int cardValue;
-    protected int suit;
+    char[] suits = new char[]{'♠', '♦', '♥', '♣'};
+    int cardValue;
+    int suit;
 
 
     public Card() {

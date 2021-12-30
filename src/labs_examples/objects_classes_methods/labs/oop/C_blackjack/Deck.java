@@ -5,39 +5,37 @@ import java.util.Random;
 
 public class Deck {
 
-    protected Card[] cards;
-    protected ArrayList<Integer> usedCards;
+    Card[] cards;
+    ArrayList<Integer> usedCards;
+
+    public Deck() {
+        populate();
+        this.usedCards = new ArrayList<>();
+    }
 
 
     public void populate(){
         this.cards = new Card[52];
-//        String[] suits = {"spade", "diamond", "heart", "club"};
-//        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
         int k = 0;
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 13; j++) {
-                this.cards[k] = new Card(i, j);
+            for (int j = 1; j < 14; j++) {
+                this.cards[k] = new Card(j, i);
                 k++;
             }
         }
     }
 
-
-    protected Player player;
-    public void deal(){
+    public void deal(Player player){
         Random rand = new Random();
         int upperbound = 52;
         int int_random = rand.nextInt(upperbound);
-        this.usedCards = new ArrayList();
 
         while(this.usedCards.contains(int_random)){
             int_random = rand.nextInt(upperbound);
             }
 
+        player.getHand().addCard(cards[int_random]);
         this.usedCards.add(int_random);
-        System.out.println(this.cards[int_random]);
-        this.player = new Player(this.cards[int_random]);
-
     }
 }
 
