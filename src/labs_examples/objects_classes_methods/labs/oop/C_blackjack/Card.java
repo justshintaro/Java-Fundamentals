@@ -33,9 +33,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
-                "cardValue=" + cardValue +
-                ", suit=" + suit +
-                '}';
+        return "cardValue=" + cardValue +
+                " | suit=" + suit;
     }
 }
