@@ -86,10 +86,6 @@ public class BlackjackController {
             }else{
                 System.out.println("Computer win");
             }
-            System.out.println("No winner");
-        }if else(userScore > 21 && computerScore <= 21){
-            System.out.println("Computer win");
         }
-
     }
 }
