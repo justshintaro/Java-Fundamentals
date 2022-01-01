@@ -40,7 +40,7 @@ public class BlackjackController {
             System.out.println(user.getHand().toString());
             System.out.println("Hand value="+ user.getHand().returnScore());
 
-            if(user.getHand().returnScore() > 21){
+            if(user.getHand().over21()){
                 System.out.println("Your hand value is over 21");
                 break;
             }
@@ -59,32 +59,36 @@ public class BlackjackController {
             deck.deal(computer);
             System.out.println("computer took one more");
 
-            if(computer.getHand().returnScore() > 21){
+            if(computer.getHand().over21()){
                 System.out.println("computer's hand value is over 21");
                 break;
             }
         }
 
         // show the result
-        System.out.println("User's hand and hand value are below:");
+        System.out.println("\nUser's hand and hand value are below:");
         System.out.println(user.getHand().toString());
         System.out.println("Hand value="+ user.getHand().returnScore());
 
-        System.out.println("Computer's hand and hand value are below:");
+        System.out.println("\nComputer's hand and hand value are below:");
         System.out.println(computer.getHand().toString());
         System.out.println("Hand value="+ computer.getHand().returnScore());
 
         System.out.println("\nTherefore the winner is...");
 
-        int userScore = user.getHand().returnScore();
-        int computerScore = computer.getHand().returnScore();
-        if(userScore <22 && computerScore <22){
-            if(userScore < computerScore){
-                System.out.println("You win!");
-            }if else(userScore == computerScore){
-                System.out.println("No winner");
-            }else{
+        if(user.getHand().over21() && computer.getHand().over21()) {
+            System.out.println("Both you lost");
+        }else if(user.getHand().over21() && !computer.getHand().over21()){
+            System.out.println("Computer win");
+        }else if(!user.getHand().over21() && computer.getHand().over21()){
+            System.out.println("You win");
+        }else{
+            if(user.getHand().returnScore() < computer.getHand().returnScore()){
                 System.out.println("Computer win");
+            }else if(user.getHand().returnScore() > computer.getHand().returnScore()){
+                System.out.println("You win");
+            }else{
+                System.out.println("No winner");
             }
         }
     }

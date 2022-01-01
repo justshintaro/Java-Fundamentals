@@ -29,9 +29,9 @@ public class Hand {
 
     public boolean over21(){
         if(returnScore() > 21){
-            return false;
-        }else {
             return true;
+        }else {
+            return false;
         }
     }
 
