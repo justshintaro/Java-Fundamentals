@@ -76,5 +76,5 @@ public class Math {
     public void callSubtraction(){
         OtherMath.Substraction(100, 1);
     }
-    
+
 }
