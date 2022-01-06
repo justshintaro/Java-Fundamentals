@@ -43,6 +43,7 @@ public class BlackjackController {
             // ask how much each player bets
             System.out.println("\n"+username + " , how much would you like to bet?");
             int betUser = scanner.nextInt();
+            scanner.nextLine();
             System.out.println(computername + " will bet five dollars");
             int betPC = 5;
 

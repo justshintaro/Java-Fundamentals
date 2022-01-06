@@ -31,6 +31,7 @@ public class Math {
         Math objC = new Math();
         objC.callAdditionThree();
 
+
         // 6) A non-static method calling a non-static method in another class
         System.out.println("\nimplement 6)");
         Math objE = new Math();
@@ -60,7 +61,7 @@ public class Math {
     }
 
     public void callAdditionThree(){
-        additionThree(2, 3, 4);
+        this.additionThree(2, 3, 4);
 
     }
 

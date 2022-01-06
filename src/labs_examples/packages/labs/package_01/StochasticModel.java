@@ -1,4 +1,5 @@
 package labs_examples.packages.labs.package_01;
+import labs_examples.packages.labs.package_02.DataAnalytics;
 
 public class StochasticModel {
     private String professor;
@@ -10,6 +11,7 @@ public class StochasticModel {
         section = s;
         prerequisites = pre;
     }
+
 
     public void show(){
         System.out.println(professor);

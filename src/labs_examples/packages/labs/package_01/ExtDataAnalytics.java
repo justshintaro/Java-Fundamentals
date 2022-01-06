@@ -4,7 +4,7 @@ import labs_examples.packages.labs.package_02.DataAnalytics;
 public class ExtDataAnalytics extends DataAnalytics{
     String courseDescription;
 
-    public ExtDataAnalytics(String pro, int s, String pre, String c){
+    public ExtDataAnalytics(String pro, int s, String[] pre, String c){
         super(pro, s, pre);
         courseDescription = c;
     }
@@ -40,11 +40,11 @@ public class ExtDataAnalytics extends DataAnalytics{
         section = s;
     }
 
-    public String getPrerequisites() {
+    public String[] getPrerequisites() {
         return prerequisites;
     }
 
-    public void setPrerequisites(String pre) {
+    public void setPrerequisites(String[] pre) {
         prerequisites = pre;
     }
 
