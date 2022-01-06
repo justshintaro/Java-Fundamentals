@@ -26,7 +26,7 @@ public class BlackjackController {
         String computername = scanner.nextLine();
         Player computer = new Player(computername);
 
-
+        
 
         // give the user and computer both an initial sum of money
         System.out.println("what is your sum of money, "+ username + "?");
