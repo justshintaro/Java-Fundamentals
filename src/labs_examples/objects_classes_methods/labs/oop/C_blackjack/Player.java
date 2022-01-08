@@ -47,3 +47,4 @@ public class Player {
         return "current potValue=" + this.potValue;
     }
 }
+
