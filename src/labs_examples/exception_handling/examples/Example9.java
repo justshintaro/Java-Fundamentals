@@ -11,10 +11,10 @@ class ThrowDemo {
             // catch the exception
             System.out.println("Exception caught.");
         }
-
         try {
             int x = testThrow();
-        } catch (ArithmeticException ae){
+        }
+        catch (ArithmeticException ae){
             throw ae;
         }
 

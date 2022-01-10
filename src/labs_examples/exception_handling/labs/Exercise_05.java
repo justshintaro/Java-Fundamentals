@@ -10,9 +10,13 @@ import java.util.Arrays;
  */
 
 class Example {
-
     public static void main(String[] args) {
-
+        try {
+            System.out.println("Before throw.");
+            throw new RuntimeException();
+        }
+        catch (RuntimeException e){
+            System.out.println(e);
+        }
     }
-
 }
