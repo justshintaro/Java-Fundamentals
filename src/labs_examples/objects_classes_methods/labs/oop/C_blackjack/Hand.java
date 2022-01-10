@@ -41,6 +41,11 @@ public class Hand {
 
     @Override
     public String toString() {
-        return "Hand= " + cards;
+        String str = new String();
+        for(Card card :cards){
+            str += " "+card;
+        }
+
+        return str;
     }
 }

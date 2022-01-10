@@ -30,47 +30,39 @@ class Example02 {
 
             do {
                 i = fin.read();
-                if(i != -1)
-                    if((char) i == 'a')
-                        i = '-';
+                if (i != -1) {
+                    if ((char) i == 'a') i = '-';
+                    if ((char) i == 'e') i = '~';
+                    if ((char) i == 'u') i = '&';
+                    if ((char) i == 'o') i = '%';
+                    if ((char) i == 'i') i = '$';
                     fout.write(i);
-                    if((char) i == 'e')
-                        i = '~';
-                    fout.write(i);
-                    if((char) i == 'u')
-                        i = '&';
-                    fout.write(i);
-                    if((char) i == 'o')
-                        i = '%';
-                    fout.write(i);
-                    if((char) i == 'i')
-                        i = '$';
-                    fout.write(i);
-            } while(i != -1);
+                }
+            } while (i != -1);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                if(fin != null){
+                if (fin != null) {
                     fin.close();
                 }
             } catch (IOException e) {
                 System.out.println("I/O Error: " + e);
-            }
-            finally {
-            try {
-                if(fin != null){
-                    fin.close();
+            } finally {
+                try {
+                    if (fin != null) {
+                        fin.close();
+                    }
+                } catch (IOException exc) {
+                    System.out.println("Error Closing Input File");
                 }
-            }catch(IOException exc) {
-                System.out.println("Error Closing Input File");
-            }
-            try {
-                if(fout != null){
-                    fout.close();
+                try {
+                    if (fout != null) {
+                        fout.close();
+                    }
+                } catch (IOException exc) {
+                    System.out.println("Error Closing Output FIle");
                 }
-            } catch(IOException exc){
-                System.out.println("Error Closing Output FIle");
             }
         }
     }

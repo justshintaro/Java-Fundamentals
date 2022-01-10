@@ -17,45 +17,18 @@ class Example01 {
         String fileReadPath = new  String("C:/Users/shin2/Documents/Shintaro/00_CodingNomads/labs/online-java-fundamentals/src/labs_examples/input_output/files/byte_data");
         String fileWritePath = new  String("C:/Users/shin2/Documents/Shintaro/00_CodingNomads/labs/online-java-fundamentals/src/labs_examples/input_output/labs/byte_data_copy");
 
-        FileInputStream fin = null;
-        FileOutputStream fout = null;
-
-        BufferedInputStream bufferedInputStream = null;
-        BufferedOutputStream bufferedOutputStream = null;
-
-        try {
-            fin = new FileInputStream(fileReadPath);
-            fout = new FileOutputStream(fileWritePath);
-            bufferedInputStream = new BufferedInputStream(fin);
-            bufferedOutputStream = new BufferedOutputStream(fout);
-
+        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(fileReadPath));
+        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(fileWritePath))){
 
             byte[] buffer = new byte[5];
             int bytesRead = 0;
 
             while ((bytesRead = bufferedInputStream.read(buffer)) != -1){
-                fout.write(buffer);
+                bufferedOutputStream.write(buffer);
                 System.out.print(new String(buffer, 0, bytesRead));
             }
         } catch (IOException exc) {
             exc.printStackTrace();
-        } finally {
-            try {
-                if(fin != null){
-                    fin.close();
-                    bufferedInputStream.close();
-                }
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            try {
-                if(fout != null) {
-                    fout.close();
-                    bufferedOutputStream.close();
-                }
-            } catch(IOException exc){
-                System.out.println("Error Closing Output File");
-            }
         }
     }
 }

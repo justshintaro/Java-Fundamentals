@@ -5,20 +5,15 @@ import java.util.Scanner;  // Import the Scanner class
 
 public class BlackjackController {
 
-
-
+    static int numOfGames = 0;
+    static int numOfWins = 0;
+    static int numOfLoss = 0;
 
     public static void main(String[] args) {
-
         playBlackJack();
-
     }
 
     public static void playBlackJack(){
-
-        int numOfGames = 0;
-        int numOfWins = 0;
-        int numOfLoss = 0;
 
         // start a game
         Scanner scanner = new Scanner(System.in);
@@ -42,9 +37,7 @@ public class BlackjackController {
         int budgetPC = scanner.nextInt();
         computer.setPotValue(budgetPC);
 
-
         while(user.getPotValue() > 0 && computer.getPotValue() > 0){
-
 
             // ask how much each player bets
             System.out.println();

@@ -2,6 +2,7 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Card {
 
+    String[] cardValues = new String[]{"one", "two",  "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king"};
     char[] suits = new char[]{'♠', '♦', '♥', '♣'};
     int cardValue;
     int suit;
@@ -33,7 +34,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "cardValue=" + cardValue +
-                "/suit=" + suit;
+        return "cardValue=" + cardValues[cardValue-1] +
+                "/suit=" + suits[suit];
     }
 }
