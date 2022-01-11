@@ -21,49 +21,38 @@ class Example02 {
         String fileReadPath = new String("C:/Users/shin2/Documents/Shintaro/00_CodingNomads/labs/online-java-fundamentals/src/labs_examples/input_output/files/char_data.txt");
         String fileWritePath = new String("C:/Users/shin2/Documents/Shintaro/00_CodingNomads/labs/online-java-fundamentals/src/labs_examples/input_output/labs/char_data_encrypted.txt");
 
-        FileInputStream fin = null;
-        FileOutputStream fout = null;
-
-        try {
-            fin = new FileInputStream(fileReadPath);
-            fout = new FileOutputStream(fileWritePath);
+        try (BufferedReader bufferedInputStream = new BufferedReader(new FileReader(fileReadPath));
+        BufferedWriter bufferedOutputStream = new BufferedWriter(new FileWriter(fileWritePath))){
 
             do {
-                i = fin.read();
+                i = bufferedInputStream.read();
                 if (i != -1) {
                     if ((char) i == 'a') i = '-';
                     if ((char) i == 'e') i = '~';
                     if ((char) i == 'u') i = '&';
                     if ((char) i == 'o') i = '%';
                     if ((char) i == 'i') i = '$';
-                    fout.write(i);
+                    bufferedOutputStream.write(i);
                 }
             } while (i != -1);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (fin != null) {
-                    fin.close();
+        }
+
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(fileWritePath))){
+            do {
+                i = bufferedReader.read();
+                if(i != -1) {
+                    if ((char) i == '-') i = 'a';
+                    if ((char) i == '~') i = 'e';
+                    if ((char) i == '&') i = 'u';
+                    if ((char) i == '%') i = 'o';
+                    if ((char) i == '$') i = 'i';
+                    System.out.print((char) i);
                 }
-            } catch (IOException e) {
-                System.out.println("I/O Error: " + e);
-            } finally {
-                try {
-                    if (fin != null) {
-                        fin.close();
-                    }
-                } catch (IOException exc) {
-                    System.out.println("Error Closing Input File");
-                }
-                try {
-                    if (fout != null) {
-                        fout.close();
-                    }
-                } catch (IOException exc) {
-                    System.out.println("Error Closing Output FIle");
-                }
-            }
+            } while(i != -1);
+        } catch(IOException exc){
+            System.out.println(exc);
         }
     }
 }
