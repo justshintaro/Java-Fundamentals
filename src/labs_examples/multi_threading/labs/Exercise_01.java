@@ -11,24 +11,26 @@ import javax.swing.plaf.TableHeaderUI;
  */
 
 class MyThread1 implements Runnable {
-    String thrdName;    
+
+    Thread newThrd;
 
     MyThread1(String name) {
-        thrdName = name;
+        newThrd = new Thread(this, name);
+        newThrd.start();
     }
 
     @Override
     public void run() {
-        System.out.println(thrdName + " starting.");
+        System.out.println(newThrd.getName() + " starting.");
         try {
             for(int count=0; count<10; count++){
                 Thread.sleep(400);
-                System.out.println(thrdName+" - " + count);
+                System.out.println(newThrd.getName()+" - " + count);
             }
         }catch(InterruptedException exc) {
-            System.out.println(thrdName +" interrupted.");
+            System.out.println(newThrd.getName() +" interrupted.");
         }
-        System.out.println(thrdName + " terminating.");
+        System.out.println(newThrd.getName() + " terminating.");
     }
 }
 
@@ -37,8 +39,9 @@ class UseThread1 {
         System.out.println("main thread starting.");
 
         MyThread1 mt1 = new MyThread1("child #1");
-        Thread newThrd = new Thread(mt1);
-        newThrd.start();
+        MyThread1 mt2 = new MyThread1("child #2");
+        MyThread1 mt3 = new MyThread1("child #3");
+
 
         for(int i = 0; i<50; i++){
             System.out.print(".");
