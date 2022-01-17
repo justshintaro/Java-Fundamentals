@@ -36,9 +36,7 @@ class Exercise04{
                 fantasyLeaders.add(mapValuesToFantasyObject(values));
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException e)  {
             e.printStackTrace();
         }
 

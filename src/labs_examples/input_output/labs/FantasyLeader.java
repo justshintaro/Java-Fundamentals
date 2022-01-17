@@ -91,15 +91,6 @@ public class FantasyLeader {
 
     @Override
     public String toString() {
-        return "FantasyLeader{" +
-                "rank=" + rank +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", team='" + team + '\'' +
-                ", position='" + position + '\'' +
-                ", points=" + points +
-                ", games=" + games +
-                ", avg=" + avg +
-                '}';
+        return rank + "," + firstName + "," + "," + team + "," + position + "," + points + "," + games + "," + avg;
     }
 }

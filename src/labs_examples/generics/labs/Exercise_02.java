@@ -14,15 +14,15 @@ import java.util.Arrays;
 
 class Demo{
 
-    public static <E extends Number> void printArray(ArrayList<E> arrayList){
-        Number sum = 0;
+    public static <E extends Number> double printArray(ArrayList<E> arrayList){
+        double sum = 0;
 
-//        for (int i = 0; i < arrayList.size(); i++){
-//            sum = sum + arrayList.get(i);
-//
-//            System.out.println(arrayList.get(i));
-//        }
+        for (int i = 0; i < arrayList.size(); i++){
+            sum += arrayList.get(i).doubleValue();
 
+            System.out.println(arrayList.get(i));
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
@@ -30,8 +30,7 @@ class Demo{
         al.add(100);
         al.add(1.1111);
         al.add(2.9);
-        printArray(al);
+        System.out.println(printArray(al));
 
     }
-
 }

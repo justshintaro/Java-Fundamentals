@@ -11,7 +11,6 @@ class Priority implements Runnable {
 
     static boolean stop = false;
     static String currentName;
-    int id = 0;
 
 
     Priority(String name) {
@@ -30,7 +29,7 @@ class Priority implements Runnable {
                 currentName = thrd.getName();
                 System.out.println(currentName);
             }
-        } while(stop == false && count < 1000);
+        } while(stop == false && count < 100000);
         stop = true;
 
         System.out.println(thrd.getName() + " terminating.");
@@ -45,8 +44,8 @@ class UseThread3 {
         Priority mt2 = new Priority("child #2 : High Priority");
         Priority mt3 = new Priority("child #3 : Middle Priority");
 
-        mt1.thrd.setPriority(Thread.NORM_PRIORITY - 2);
-        mt2.thrd.setPriority(Thread.NORM_PRIORITY + 2);
+        mt1.thrd.setPriority(Thread.MIN_PRIORITY);
+        mt2.thrd.setPriority(Thread.MAX_PRIORITY);
         mt3.thrd.setPriority(Thread.NORM_PRIORITY);
 
         mt1.thrd.start();
@@ -64,7 +63,6 @@ class UseThread3 {
         System.out.println("child #1 : "+mt1.count);
         System.out.println("child #2 : "+mt2.count);
         System.out.println("child #3 : "+mt3.count);
-
 
     }
 }
