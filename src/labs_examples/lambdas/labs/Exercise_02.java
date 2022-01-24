@@ -1,4 +1,6 @@
 package labs_examples.lambdas.labs;
+import java.util.*;
+import java.util.function.*;
 
 /**
  * Lambdas Exercise 2:
@@ -7,3 +9,10 @@ package labs_examples.lambdas.labs;
  *      10 of them! You can do it! You'll know so much about them when you're done!
  *
  */
+class Test {
+    public static void main(String[] args) {
+        BooleanSupplier firstEx = () -> {
+          return true;
+        };
+    }
+}

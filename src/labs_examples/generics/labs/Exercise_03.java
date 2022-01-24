@@ -1,5 +1,6 @@
 package labs_examples.generics.labs;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -28,19 +29,31 @@ class Exercise3{
         swap(stringArray, 0, 3);
         System.out.println();
         swap(intArray, 0, 3);
+        System.out.println();
 
         List<Integer> list = Arrays.asList(10, 100, 20, 110, 30, 120, 40, 1);
-        System.out.println(maximalElement(list, 1, 6));
+        System.out.println("maxim is " + maximalElement(list, 1, 6));
+        System.out.println();
+
+        ArrayList<String> collection = new ArrayList<>();
+        collection.add("Mango");
+        collection.add("My gym");
+        collection.add("Apple");
+        collection.add("Step on no Pets");
+        collection.add("Banana");
+        collection.add("never odd or even");
+        countPalindromes(collection);
 
     }
 
+//1)
     public static <E extends Number> double printSum(E a, E b){
         double sum = a.doubleValue() + b.doubleValue();
         return sum;
     }
 
 //2) Write a generic method to count the number of elements in a "Collection" of Strings that are palindromes
-    public static void countPalindromes(Collection<String> c){
+    public static <E extends Collection<String>> void countPalindromes(E c){
         int count = 0;
         for (String elem : c){
             int length = 0;
@@ -51,6 +64,16 @@ class Exercise3{
             }
         }
     }
+
+//    public boolean Palindrome(String str){
+//        for(int i = 0; i<str.length()/2; i++){
+//            if(str.charAt(i) == str.charAt(str.length() - 1 - i)){
+//                length++;
+//            }
+//
+//    }
+
+
 
 // 3) Write a generic method to exchange the positions of two different elements in an array.
     public static <T> void swap(T[] array, int i, int j){

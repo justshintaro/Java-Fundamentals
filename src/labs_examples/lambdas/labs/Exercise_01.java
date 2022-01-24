@@ -23,3 +23,17 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+@FunctionalInterface
+interface FirstFunctionalInterface{
+    public void noParameter();
+}
+
+class Ex2 {
+
+    public static void main(String[] args) {
+        FirstFunctionalInterface statement = () -> {
+            System.out.println("Hello World!");
+        };
+        statement.noParameter();
+    }
+}
