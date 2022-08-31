@@ -2,6 +2,7 @@ package labs_examples.arrays.labs;
 
 import java.util.Scanner;
 
+
 /**
  * Arrays calculator
  *
