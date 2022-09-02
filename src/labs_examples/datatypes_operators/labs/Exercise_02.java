@@ -24,13 +24,13 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
-        int inval = 1001;
+        int inval = 10;
         double douval = inval;
         System.out.println(douval);
 
-        double doubleval = 10.5;
-        int inteval = (int) doubleval;
-        System.out.println(inteval);
+        double doubleval = 12.121111;
+        int integerval = (int) doubleval;
+        System.out.println(integerval);
 
 
     }
